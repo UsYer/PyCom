@@ -61,7 +61,8 @@ if __name__ == "__main__":
         # interrupt the program with Ctrl-C
         server.serve_forever()
     else:#client
-        client = Client("localhost",args.port)
+        host = input("host: ")
+        client = Client(host,args.port)
         try:
             client.connect()
 
